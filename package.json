@@ -1,6 +1,6 @@
 {
   "name": "npm-package-app",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "private": false,
   "description": "test React components",
   "author": "Shubham",
@@ -40,7 +40,7 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build": "rm -rf dist && NODE_ENV=production babel --extensions .ts,.tsx ./src -d ./dist",
+    "build": "rm -rf dist && NODE_ENV=production babel --extensions .ts,.tsx ./src -d dist --copy-files",
     "publish:npm": "rm -rf dist && mkdir dist &&  babel src -d dist --copy-files"
   },
   "eslintConfig": {
