@@ -1,10 +1,24 @@
 {
   "name": "npm-package-app",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": false,
+  "description": "test React components",
+  "author": "Shubham",
+  "keywords": [
+    "react",
+    "components",
+    "ui"
+  ],
+  "main": "dist/lib/index.js",
+  "module": "dist/lib/index.js",
+  "files": [
+    "dist",
+    "README.md"
+  ],
   "babel": {
     "presets": [
-      "@babel/preset-react"
+      "@babel/preset-react",
+      "@babel/preset-typescript"
     ]
   },
   "dependencies": {
@@ -26,7 +40,7 @@
     "start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files",
+    "build": "rm -rf dist && NODE_ENV=production babel --extensions .ts,.tsx ./src -d ./dist",
     "publish:npm": "rm -rf dist && mkdir dist &&  babel src -d dist --copy-files"
   },
   "eslintConfig": {
