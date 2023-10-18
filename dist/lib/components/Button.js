@@ -12,5 +12,4 @@ const Button = props => {
     disabled: props.disabled
   }, /*#__PURE__*/_react.default.createElement("h4", null, props.label));
 };
-var _default = Button;
-exports.default = _default;
+var _default = exports.default = Button;
